@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <Import Project="TFSBuild.proj" />
+
+  <Target Name="Build" DependsOnTargets="Compile;Deploy" />
+
+  <Target Name="Compile">
+    <MSBuild Projects="$(ProjectName).sln" />
+  </Target>
+  
+  <Target Name="Deploy">
+    <GetAssemblyIdentity AssemblyFiles="$(AssemblyPath)">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
+    </GetAssemblyIdentity>
+    <Copy DestinationFolder="src\$(AssemblyName)\nuget\lib\net40" SourceFiles="$(AssemblyPath);$(XmlDocPath)" />
+  </Target>
+</Project>

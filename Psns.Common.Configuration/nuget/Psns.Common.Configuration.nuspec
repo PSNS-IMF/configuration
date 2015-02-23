@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Psns.Common.Configuration</id>
+    <title>PSNS Common Configuration Helpers</title>
+    <authors>Jeff Purcell</authors>
+    <owners>109.14</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Module to assist with Configuration settings</description>
+    <projectUrl>https://github.com/PSNS-IMF/configuration</projectUrl>
+    <licenseUrl>https://github.com/PSNS-IMF/configuration/blob/master/LICENSE</licenseUrl>
+    <releaseNotes>
+      ## 1.0.0.1
+      ### Features
+      * Adding support for .NET 4.5
+    </releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <version>$version$</version>
+  </metadata>
+  <files>
+    <file src="content\*.*" target="content" />
+    <file src="..\bin\$configuration$\*.Configuration.*" target="lib\net40\" />
+    <file src="..\bin\$configuration$\net45\*.Configuration.*" target="lib\net45\" />
+  </files>
+</package>
