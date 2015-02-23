@@ -43,9 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Psns.Common.Test.BehaviorDrivenDevelopment, Version=1.0.0.12122, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Psns.Common.Test.BehaviorDrivenDevelopment, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Psns.Common.Test.BehaviorDrivenDevelopment.1.0.0.12122\lib\net40\Psns.Common.Test.BehaviorDrivenDevelopment.dll</HintPath>
+      <HintPath>..\..\lib\Psns.Common.Test.BehaviorDrivenDevelopment.1.0.0.2\lib\net40\Psns.Common.Test.BehaviorDrivenDevelopment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
