@@ -19,7 +19,7 @@
   </Target>
 
   <Target Name="Test">
-    <Exec Command="&quot;$(VsTestConsole)&quot; $(ProjectName).UnitTests\$(ProjectName).UnitTests\bin\$(Configuration)\$(ProjectName).UnitTests.dll" />
+    <Exec Command="&quot;$(VsTestConsole)&quot; $(ProjectName).UnitTests\bin\$(Configuration)\$(ProjectName).UnitTests.dll" />
   </Target>
 
   <Target Name="Deploy">
