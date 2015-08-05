@@ -124,7 +124,7 @@ namespace Psns.Common.Configuration.UnitTests
         [TestMethod]
         public void ThenNullShouldBeReturned()
         {
-            Assert.IsNull(Reader.GetValue("Key"));
+            Assert.IsNull(Reader.GetValue("RandomKeyValue"));
         }
     }
 
