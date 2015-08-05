@@ -10,6 +10,10 @@
     <projectUrl>https://github.com/PSNS-IMF/configuration</projectUrl>
     <licenseUrl>https://github.com/PSNS-IMF/configuration/blob/master/LICENSE</licenseUrl>
     <releaseNotes>
+      ## 1.0.0.2
+      ### Features
+      * Adding a method to AppEnvironmentReader to get the value for a specified key in the AppSettings section
+
       ## 1.0.0.1
       ### Features
       * Adding support for .NET 4.5

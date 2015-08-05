@@ -102,6 +102,33 @@ namespace Psns.Common.Configuration.UnitTests
     }
 
     [TestClass]
+    public class AndGettingTheValueForAGivenKey : WhenWorkingWithTheAppEnvironmentReader
+    {
+        public override void Arrange()
+        {
+            base.Arrange();
+
+            ConfigurationManager.AppSettings["Key"] = "Value";
+        }
+
+        [TestMethod]
+        public void ThenTheValueShouldBeReturned()
+        {
+            Assert.AreEqual("Value", Reader.GetValue("Key"));
+        }
+    }
+
+    [TestClass]
+    public class AndGettingTheValueForAMissingKey : WhenWorkingWithTheAppEnvironmentReader
+    {
+        [TestMethod]
+        public void ThenNullShouldBeReturned()
+        {
+            Assert.IsNull(Reader.GetValue("Key"));
+        }
+    }
+
+    [TestClass]
     public class AndEnvironmentIsInvalid : WhenWorkingWithTheAppEnvironmentReader
     {
         public override void Arrange()

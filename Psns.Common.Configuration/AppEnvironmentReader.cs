@@ -27,6 +27,13 @@ namespace Psns.Common.Configuration
         /// The current runtime Environment
         /// </summary>
         AppEnvironment Current { get; }
+
+        /// <summary>
+        /// Defines a method to get the value for a key
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        string GetValue(string key);
     }
 
     /// <summary>
@@ -59,6 +66,16 @@ namespace Psns.Common.Configuration
 
                 return environment;
             }
+        }
+
+        /// <summary>
+        /// Gets the AppSettings Value for the specified Key
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns>The value or null if Key wasn't found</returns>
+        public string GetValue(string key)
+        {
+            return ConfigurationManager.AppSettings[key];
         }
     }
 }
